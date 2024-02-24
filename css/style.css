@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+header nav img.header_logo {
+  height: 32px;
+  width: 116px;
+}
+header nav .nav_item ul li a {
+  color: white;
+}
+header nav .nav_item ul li a i {
+  color: white;
+}
+
+.menu_header .container {
+  margin-top: 24px;
+}
+.menu_header .container ul {
+  padding: 0;
+}
+.menu_header .container ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 27px;
+}
+.menu_header .container ul li.active {
+  margin-left: 0;
+}
+.menu_header .container ul li.active a {
+  font-weight: 400;
+}
+.menu_header .container ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.carousel .container .carousel_item {
+  position: absolute;
+  top: 50% !important;
+  right: 30px !important;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+.carousel .container .carousel_item h5 {
+  font-size: 40px;
+  font-weight: 300;
+}
+.carousel .container .carousel_item p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.carousel .container .carousel-indicators [data-bs-target] {
+  height: 20px !important;
+  width: 20px !important;
+  border-radius: 50%;
+  background-color: #dddddc;
+}
+.carousel .container .carousel-prev-icon,
+.carousel .container .carousel-next-icon {
+  font-size: 40px;
+  color: black;
+}
+.carousel .container .carousel-control-prev {
+  justify-content: start !important;
+}
+.carousel .container .carousel-control-next {
+  justify-content: end !important;
+}
+.carousel .container .carousel_bottom img {
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  bottom: -100px;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=style.css.map */

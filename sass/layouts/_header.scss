@@ -1,0 +1,46 @@
+header {
+    nav {
+        img.header_logo {
+            height: 32px;
+            width: 116px;
+        }
+        .nav_item {
+            ul {
+                li {
+                    a {
+                        color: $color_white;
+                        i {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.menu_header {
+    .container {
+        margin-top: 24px;
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 27px;
+                &.active {
+                    margin-left: 0;
+                    a {
+                        font-weight: $fw_400;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: $color_black;
+                    font-size: $fs_text_1;
+                    font-weight: $fw_300;
+                }
+            }
+        }
+    }
+}
