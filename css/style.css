@@ -15,6 +15,12 @@ header nav .nav_item ul li a {
 header nav .nav_item ul li a i {
   color: white;
 }
+header nav .nav_item ul li a i:hover {
+  color: #f8b653 !important;
+}
+header nav .nav_item ul li a.nav-link:hover {
+  color: #f8b653 !important;
+}
 
 .menu_header .container {
   margin-top: 24px;
@@ -26,9 +32,12 @@ header nav .nav_item ul li a i {
   list-style: none;
   display: inline-block;
   margin: 0 27px;
+  border-bottom: solid 2px transparent;
+  transition: all 0.8s;
 }
 .menu_header .container ul li.active {
   margin-left: 0;
+  border-bottom: solid 2px #f8b653;
 }
 .menu_header .container ul li.active a {
   font-weight: 400;
@@ -38,6 +47,14 @@ header nav .nav_item ul li a i {
   color: black;
   font-size: 20px;
   font-weight: 300;
+  transition: all 0.8s;
+}
+.menu_header .container ul li a:hover {
+  font-weight: 400;
+}
+.menu_header .container ul li:hover {
+  border-color: #f8b653;
+  font-weight: 400;
 }
 
 .carousel .container .carousel_item {
