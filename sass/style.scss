@@ -1,2 +1,7 @@
 // Base
-@import "./base/reset";
+@import './base/reset';
+// helpers
+@import './helper/variables';
+// Layouts
+@import './layouts/header';
+@import './layouts/carousel';
