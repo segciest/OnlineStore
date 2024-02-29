@@ -64,3 +64,38 @@ header {
         }
     }
 }
+//responsive
+// @include responsive('extra-large-down') {
+
+// }
+// @include responsive('large-down') {
+
+// }
+@include responsive('medium-down') {
+    .menu_header {
+        .container {
+            ul {
+                li {
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}
+@include responsive('small-down') {
+    .menu_header {
+        .container {
+            ul {
+                li {
+                    margin: 0 10px;
+                    &.active {
+                        margin-left: 10px;
+                    }
+                    a {
+                        font-size: $fs_text_1_1;
+                    }
+                }
+            }
+        }
+    }
+}
