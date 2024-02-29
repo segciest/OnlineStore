@@ -3,7 +3,7 @@
         .carousel_item {
             position: absolute;
             top: 50% !important;
-            right: 30px !important;
+            right: -5% !important;
             transform: translate(-50%, -50%);
             text-align: left;
             h5 {
@@ -33,12 +33,98 @@
             justify-content: end !important;
         }
         .carousel_bottom {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
             img {
                 width: 100%;
-                background-size: cover;
-                position: absolute;
-                bottom: -100px;
-                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+//responsive
+@include responsive('extra-large-down') {
+    .carousel {
+        .container {
+            .carousel_item {
+                right: -10% !important;
+            }
+        }
+    }
+}
+@include responsive('large-down') {
+    .carousel {
+        .container {
+            .carousel_item {
+                right: -16% !important;
+                h5 {
+                    font-size: $fs_title_1;
+                }
+            }
+        }
+    }
+}
+@include responsive('medium-down') {
+    .carousel {
+        .container {
+            .carousel_item {
+                right: -14% !important;
+                h5 {
+                    font-size: $fs_title_2;
+                }
+                p {
+                    font-size: $fs_text;
+                }
+            }
+        }
+    }
+}
+@include responsive('small-down') {
+    .carousel {
+        .container {
+            .carousel_item {
+                right: -14% !important;
+                h5 {
+                    font-size: $fs_title_3;
+                }
+                p {
+                    font-size: $fs_text_1_1;
+                    margin-bottom: 10px;
+                }
+                .styleButton1 {
+                    padding: 6px 16px;
+                }
+            }
+            .carousel-prev-icon,
+            .carousel-next-icon {
+                font-size: $fs_text_3;
+            }
+        }
+    }
+}
+@include responsive('extra-small-down') {
+    .carousel {
+        .container {
+            .carousel_item {
+                right: -10% !important;
+                h5 {
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                }
+                .styleButton1 {
+                    padding: 3px 10px;
+                }
+            }
+            .carousel-prev-icon,
+            .carousel-next-icon {
+                font-size: $fs_text_2;
+            }
+            .carousel-indicators [data-bs-target] {
+                height: 12px !important;
+                width: 12px !important;
             }
         }
     }

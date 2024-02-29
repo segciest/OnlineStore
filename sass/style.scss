@@ -2,6 +2,10 @@
 @import './base/reset';
 // helpers
 @import './helper/variables';
+@import './helper/mixin';
+// Components
+@import './components/button';
 // Layouts
 @import './layouts/header';
 @import './layouts/carousel';
+@import './layouts/product';

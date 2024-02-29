@@ -5,6 +5,40 @@
   font-family: "Inter", sans-serif;
 }
 
+button.styleButton1 {
+  background-color: #f8b653;
+  padding: 10px 20px;
+  border: 1px solid #f8b653;
+  color: white;
+  font-size: 16px;
+  box-shadow: none;
+  transition: all 0.5s;
+  border-radius: 8px;
+  cursor: pointer !important;
+}
+
+button.styleButton1:hover {
+  color: #e1b067;
+  background-color: black !important;
+}
+
+button.styleButton2 {
+  background-color: #e1b067;
+  padding: 12px 20px;
+  border: 1px solid #e1b067;
+  color: white;
+  font-size: 16px;
+  box-shadow: none;
+  transition: all 0.5s;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer !important;
+}
+
+button.styleButton2:hover {
+  color: #f8b653;
+  background-color: black;
+}
+
 header nav img.header_logo {
   height: 32px;
   width: 116px;
@@ -57,10 +91,26 @@ header nav .nav_item ul li a.nav-link:hover {
   font-weight: 400;
 }
 
+@media screen and (max-width: 767.98px) {
+  .menu_header .container ul li {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .menu_header .container ul li {
+    margin: 0 10px;
+  }
+  .menu_header .container ul li.active {
+    margin-left: 10px;
+  }
+  .menu_header .container ul li a {
+    font-size: 14px;
+  }
+}
 .carousel .container .carousel_item {
   position: absolute;
   top: 50% !important;
-  right: 30px !important;
+  right: -5% !important;
   transform: translate(-50%, -50%);
   text-align: left;
 }
@@ -89,10 +139,125 @@ header nav .nav_item ul li a.nav-link:hover {
 .carousel .container .carousel-control-next {
   justify-content: end !important;
 }
+.carousel .container .carousel_bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
 .carousel .container .carousel_bottom img {
   width: 100%;
-  background-size: cover;
-  position: absolute;
-  bottom: -100px;
-  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .carousel .container .carousel_item {
+    right: -10% !important;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .carousel .container .carousel_item {
+    right: -16% !important;
+  }
+  .carousel .container .carousel_item h5 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .carousel .container .carousel_item {
+    right: -14% !important;
+  }
+  .carousel .container .carousel_item h5 {
+    font-size: 24px;
+  }
+  .carousel .container .carousel_item p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .carousel .container .carousel_item {
+    right: -14% !important;
+  }
+  .carousel .container .carousel_item h5 {
+    font-size: 18px;
+  }
+  .carousel .container .carousel_item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .carousel .container .carousel_item .styleButton1 {
+    padding: 6px 16px;
+  }
+  .carousel .container .carousel-prev-icon,
+  .carousel .container .carousel-next-icon {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 429.98px) {
+  .carousel .container .carousel_item {
+    right: -10% !important;
+  }
+  .carousel .container .carousel_item h5 {
+    font-size: 12px;
+  }
+  .carousel .container .carousel_item p {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .carousel .container .carousel_item .styleButton1 {
+    padding: 3px 10px;
+  }
+  .carousel .container .carousel-prev-icon,
+  .carousel .container .carousel-next-icon {
+    font-size: 24px;
+  }
+  .carousel .container .carousel-indicators [data-bs-target] {
+    height: 12px !important;
+    width: 12px !important;
+  }
+}
+.product .container .card_body {
+  padding: 0 60px;
+}
+.product .container .card_body .product_content {
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.product .container .product_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product .container .product_img img {
+  width: 70%;
+}
+.product .container .product_info {
+  text-align: center;
+}
+.product .container .product_info h3 {
+  font-weight: 300;
+  font-size: 20px;
+}
+.product .container .product_info p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #dddddc;
+}
+.product .container .product_button {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.product .container .product_button p {
+  background-color: #dddddc;
+  padding: 13px 20px;
+  border-radius: 0 3px 3px 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .product .container .card_body {
+    padding: 0 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
