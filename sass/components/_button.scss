@@ -39,3 +39,23 @@ button.styleButton2 {
         background-color: $color_black;
     }
 }
+button {
+    &.styleButton3 {
+        // @include styleButton($color_green_100, 10px 20px, $color_black, $fs_text);
+        background-color: $color_green_200;
+        opacity: 0.8;
+        padding: 12px 20px;
+        border: 1px solid $color_green_200;
+        color: $color_white; // xanh
+        font-size: $fs_text;
+        box-shadow: none;
+        transition: all 0.5s;
+        border-radius: 0 8px 8px 0;
+        cursor: pointer !important;
+    }
+}
+button.styleButton3 {
+    &:hover {
+        opacity: 1;
+    }
+}
