@@ -39,6 +39,23 @@ button.styleButton2:hover {
   background-color: black;
 }
 
+button.styleButton3 {
+  background-color: #e1b067;
+  opacity: 0.8;
+  padding: 12px 20px;
+  border: 1px solid #e1b067;
+  color: white;
+  font-size: 16px;
+  box-shadow: none;
+  transition: all 0.5s;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer !important;
+}
+
+button.styleButton3:hover {
+  opacity: 1;
+}
+
 header nav img.header_logo {
   height: 32px;
   width: 116px;
@@ -213,6 +230,15 @@ header nav .nav_item ul li a.nav-link:hover {
     height: 12px !important;
     width: 12px !important;
   }
+}
+.product .container .search form {
+  padding: 0 30px;
+}
+.product .container .search form .form-control {
+  border-radius: 8px 0 0 8px !important;
+}
+.product .container .search form .form-control:focus {
+  box-shadow: 0 0 0 1px #e1b067;
 }
 .product .container .card_body {
   padding: 0 60px;
