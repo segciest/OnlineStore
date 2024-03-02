@@ -1,2 +1,127 @@
 // Base
 @import "./base/reset";
+// Helper
+@import "./helper/mixin";
+@import "./helper/variable";
+
+header {
+  .headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    .headerLogo {
+      img {
+        width: 116px;
+        height: 32px;
+      }
+    }
+    .headerItem {
+      i {
+        display: inline;
+        align-items: center;
+        width: 60px;
+        height: 30px;
+        padding-right: 20px;
+      }
+      .login {
+        text-decoration: none;
+        color: white;
+        padding-right: 20px;
+      }
+      .register {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+.body {
+  .bodyRegister {
+    margin-top: 25px;
+    h1 {
+      text-align: center;
+      // width: 156px;
+      height: 48px;
+      font-weight: 400;
+    }
+  }
+  .bodyContent {
+    margin: 0 100px;
+    align-items: center;
+    text-align: right;
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0 30px;
+      ul {
+        display: flex;
+        text-decoration: none;
+        gap: 20px;
+        list-style: none;
+        text-align: center;
+        li {
+          text-align: center;
+        }
+      }
+    }
+    .btn {
+      button {
+        //   right: 0px;
+        @include styleButton(
+          $color_violet,
+          10px 20px,
+          $color_white,
+          $width_291_button,
+          $height_50_button
+        );
+      }
+    }
+  }
+}
+.footer {
+  border-top: solid 1px $color_footer;
+  padding: 25px;
+  margin-top: 25px;
+  .footerContent {
+    .footerUp {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      a {
+        text-decoration: none;
+        color: $color_black;
+      }
+      .forMore {
+        color: $color_red;
+      }
+      .footerItem {
+        ul {
+          list-style: none;
+          padding-left: 0 !important;
+          li {
+          }
+        }
+      }
+    }
+  }
+}
+.footer2 {
+  background-color: $color_footer;
+  padding: 25px;
+  .footer2Content {
+    .footerDown {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      a {
+        text-decoration: none;
+        color: $color_black;
+      }
+      .forMore {
+        color: $color_red;
+      }
+    }
+  }
+}
