@@ -1,5 +1,6 @@
+// import user from "./user.js";
 // Kiểm tra không cho nhập rỗng
-function checkEmptyValue(value, idSpan) {
+export function checkEmptyValue(value, idSpan) {
   // Xử lí dữ liệu value để kiểm tra xem có rỗng hay không
   let eleSpan = document.getElementById(idSpan);
   if (value == "") {
@@ -13,7 +14,7 @@ function checkEmptyValue(value, idSpan) {
 }
 
 // Kiểm tra phải là email
-function checkEmailValue(value, idSpan) {
+export function checkEmailValue(value, idSpan) {
   const regexEmail =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   let isValid = regexEmail.test(value);
@@ -28,7 +29,7 @@ function checkEmailValue(value, idSpan) {
 }
 
 // Sử dụng && để nhận cả 2 trường giá trị
-function checkMinMaxValue(value, idSpan, min, max) {
+export function checkMinMaxValue(value, idSpan, min, max) {
   let doDaiKyTu = value.length;
   if (doDaiKyTu >= min && doDaiKyTu <= max) {
     document.getElementById(idSpan).innerHTML = "";
@@ -42,7 +43,7 @@ function checkMinMaxValue(value, idSpan, min, max) {
 }
 
 // function password check
-function checkPassword(value, idSpan) {
+export function checkPassword(value, idSpan) {
   const regexPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{6,10}$/;
   var isValid = regexPassword.test(value);
@@ -58,12 +59,40 @@ function checkPassword(value, idSpan) {
 }
 
 //   function doubleCheck password
-function doubleCheckEmail(value, value2, idSpan) {
+export function doubleCheckPassword(value, value2, idSpan) {
   let eleSpan = document.getElementById(idSpan);
   if (value === value2) {
     eleSpan.innerHTML = "";
     return true;
   } else {
     eleSpan.innerHTML = "Vui lòng nhập lại mật khẩu";
+  }
+}
+
+export function checkNoNumber(value, idSpan) {
+  const regexNoNumber = /\b[^\d\W]+\b/g;
+  var isValid = regexNoNumber.test(value);
+  if (isValid) {
+    document.getElementById(idSpan).innerHTML = "";
+    return true;
+  } else {
+    document.getElementById(idSpan).style.display = "block";
+    document.getElementById(idSpan).innerHTML =
+      "Vui lòng chỉ nhập ký tự không kèm số";
+    return false;
+  }
+}
+
+export function checkIsVietnamesePhoneNumber(value, idSpan) {
+  const regexPhoneNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  let isValid = regexPhoneNumber.test(value);
+  if (isValid) {
+    document.getElementById(idSpan).innerHTML = "";
+    return true;
+  } else {
+    document.getElementById(idSpan).style.display = "block";
+    document.getElementById(idSpan).innerHTML =
+      "Vui lòng nhập số điện thoại với đầu số (+84)";
+    return false;
   }
 }
