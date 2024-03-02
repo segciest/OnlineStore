@@ -9,6 +9,7 @@ header .headerContent {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  background-color: #000000;
 }
 header .headerContent .headerLogo img {
   width: 116px;
@@ -51,9 +52,12 @@ header .headerContent .headerItem .register {
   gap: 0 30px;
 }
 .body .bodyContent form ul {
+  margin-bottom: unset;
+  padding-left: unset;
   display: flex;
+  gap: 30px;
+  justify-content: center;
   text-decoration: none;
-  gap: 20px;
   list-style: none;
   text-align: center;
 }
