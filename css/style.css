@@ -286,4 +286,131 @@ header nav .nav_item ul li a.nav-link:hover {
   .product .container .card_body {
     padding: 0 50px;
   }
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: black;
+  padding: 10px 0 0 0;
+}
+header .header_content {
+  display: flex;
+}
+header .header_content .content_logo img {
+  width: 20%;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin: 10px;
+  position: relative;
+}
+header nav ul li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -10px;
+  background-image: linear-gradient(to right, #FDF186 0, #E6CB5C 51%, #B0973C 100%);
+  transition: all 0.5s;
+}
+header nav ul li:hover::before {
+  width: 100%;
+}
+header nav ul li i {
+  color: #EEEAE6;
+  transition: all 0.5s;
+}
+header nav ul li i:hover {
+  color: #E6CB5C;
+}
+header nav ul li a {
+  color: #F6F6F6;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+header nav ul li a:hover {
+  color: #E6CB5C;
+}
+
+.header_nav nav ul {
+  display: flex;
+  list-style: none;
+}
+.header_nav nav ul li {
+  margin: 10px;
+}
+.header_nav nav ul li a {
+  text-decoration: none;
+  color: gray;
+  font-weight: 300;
+}
+.header_nav nav ul li a:hover {
+  color: black;
+}
+.header_nav nav ul li.active a {
+  color: black;
+}
+
+.product_detail .product_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_detail .product_content .content_left {
+  background-color: #F8F8F8;
+  margin: 50px;
+  padding: 50px;
+}
+.product_detail .product_content .content_left img {
+  width: 100%;
+}
+.product_detail .product_content .content_right h2 {
+  font-weight: 300;
+  margin-top: 35px;
+}
+.product_detail .product_content .content_right .sub_title {
+  color: #1cf608;
+  font-size: 20px;
+}
+.product_detail .product_content .content_right .size_right {
+  display: flex;
+  gap: 20px;
+}
+.product_detail .product_content .content_right .size_right .size-option {
+  font-weight: 800;
+  padding: 10px;
+  background-color: rgb(220, 211, 211);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.product_detail .product_content .content_right .soLuong_right {
+  display: flex;
+  gap: 10px;
+}
+.product_detail .product_content .content_right .soLuong_right .soLuong1 {
+  font-weight: 800;
+  color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, #6786F4 0, #6A88F4 51%, #8098ef 100%);
+  transition: all 0.5s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.product_detail .product_content .content_right button {
+  background-image: linear-gradient(to right, #CB17EC 0, #7C2BE3 51%, #4F37E7 100%);
+  padding: 10px 30px;
+  color: white;
+  border: 1px solid transparent;
 }/*# sourceMappingURL=style.css.map */

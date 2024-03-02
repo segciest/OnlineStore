@@ -9,3 +9,161 @@
 @import './layouts/header';
 @import './layouts/carousel';
 @import './layouts/product';
+$color_gray_100 :#EEEAE6;
+$color_gray_200 : #F6F6F6;
+
+$fw_light :300;
+
+@mixin styleTest($color,$fw){
+    color:$color;
+    font-weight: $fw;
+}
+
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: black;
+    padding:10px 0 0 0;
+    .header_content{
+        display:flex;
+
+        .content_logo{
+            img{
+                width:20%;
+            }
+        }
+    }
+    nav{
+        ul{
+            display:flex;
+            list-style: none;
+            li{
+                margin:10px;
+                position: relative;
+                &::before{
+                    content:'';
+                    position: absolute;
+                    width:0;
+                    height:3px;
+                    left:0;
+                    bottom:-10px;
+                    background-image:linear-gradient(to right, #FDF186 0, #E6CB5C 51%, #B0973C 100%);
+                    transition: all 0.5s;
+                }
+                &:hover{
+                    &::before{
+                        
+                    width:100%
+                }
+                }
+               i{
+                 color:#EEEAE6;
+                 transition: all 0.5s;
+                 &:hover{
+                    color:#E6CB5C;
+                 }
+               }
+                a{
+                    @include styleTest($color_gray_200,$fw_light);
+                    text-decoration: none;
+                    transition: all 0.5s;
+                 &:hover{
+                    color:#E6CB5C;
+                 }
+                }
+            }
+
+        }
+    }
+}
+.header_nav{
+    
+    nav{
+        ul{
+            display:flex;
+            list-style: none;
+            li{
+                margin:10px;
+                a{
+                    text-decoration: none;
+                    color: gray;
+                    font-weight: 300;
+                    &:hover{
+                    color:black;
+                    }
+                  
+                }
+                &.active{
+                    a{
+                        color:black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product_detail{
+    .product_content{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        .content_left{
+           background-color: #F8F8F8;
+           margin:50px;
+           padding:50px;
+            img{
+                width:100%;
+                
+            }
+        }
+        .content_right{
+            h2{
+                font-weight: 300;
+                margin-top:35px;
+            }
+            .sub_title{
+                color:#1cf608;
+                font-size: 20px;
+            }
+            .size_right{
+                display:flex;
+                gap:20px;
+                .size-option{
+                    font-weight: 800;
+                    padding:10px;
+                    background-color: rgb(220, 211, 211);
+                    border:1px solid transparent;
+                    cursor: pointer;
+                }
+            }
+            .soLuong_right{
+                display:flex;
+                gap:10px;
+                .soLuong1{
+                    font-weight: 800;
+                    color:white;
+                    width:30px;
+                    height:30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image:linear-gradient(to right, #6786F4 0, #6A88F4 51%, #8098ef 100%);
+                    transition: all 0.5s;
+                    border:1px solid transparent;
+                    cursor: pointer;
+                }
+            }
+            button{
+                background-image:linear-gradient(to right, #CB17EC 0, #7C2BE3 51%, #4F37E7 100%);
+                padding:10px 30px;
+                color:white;
+                border:1px solid transparent;
+        }
+    }
+}
+}
