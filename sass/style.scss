@@ -18,6 +18,17 @@ $fw_light :300;
     color:$color;
     font-weight: $fw;
 }
+@keyframes CusTom{
+    0%{
+        transform:rotate(1deg) translate(2px , 2px);
+    }
+    50%{
+        transform:rotate(-1deg)translate(-2px , -2px);
+    }
+    100%{
+        transform:rotate(1deg)translate(2px , 2px);
+    }
+}
 
 
 .container{
@@ -158,11 +169,42 @@ header{
                     cursor: pointer;
                 }
             }
-            button{
-                background-image:linear-gradient(to right, #CB17EC 0, #7C2BE3 51%, #4F37E7 100%);
-                padding:10px 30px;
-                color:white;
-                border:1px solid transparent;
+        //     button{
+        //         background-image:linear-gradient(to right, #CB17EC 0, #7C2BE3 51%, #4F37E7 100%);
+        //         padding:10px 30px;
+        //         color:white;
+        //         border:1px solid transparent;
+        // }
+        button{
+            background-image:linear-gradient(to right, #CB17EC 0, #7C2BE3 51%, #4F37E7 100%);
+            background-size: 150%;
+            border-radius: 0px;
+            color:white;
+            border:1px solid transparent;
+            padding:10px 30px;
+             font-weight: 300;
+             position:relative;
+             transition: all 1.5s;
+             animation: CusTom 2s infinite;
+             &::before{
+                content:'';
+                position:absolute;
+                width:20%;
+                height: 100%;
+                top:0;
+                left:-300%;
+                display:block;
+                background-image:  linear-gradient(to right,rgba(255, 255, 255, 0.379)0%,rgba(255, 255, 255, 0.42)100%);
+                transform: skew(-30deg);
+                transition:all 0.75s;
+             }
+             &:hover{
+                &::before{
+                    left:100%;
+                    
+                }
+                background-position: right center;
+             }
         }
     }
 }

@@ -287,6 +287,17 @@ header nav .nav_item ul li a.nav-link:hover {
     padding: 0 50px;
   }
 }
+@keyframes CusTom {
+  0% {
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+  50% {
+    transform: rotate(-1deg) translate(-2px, -2px);
+  }
+  100% {
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+}
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -410,7 +421,31 @@ header nav ul li a:hover {
 }
 .product_detail .product_content .content_right button {
   background-image: linear-gradient(to right, #CB17EC 0, #7C2BE3 51%, #4F37E7 100%);
-  padding: 10px 30px;
+  background-size: 150%;
+  border-radius: 0px;
   color: white;
   border: 1px solid transparent;
+  padding: 10px 30px;
+  font-weight: 300;
+  position: relative;
+  transition: all 1.5s;
+  animation: CusTom 2s infinite;
+}
+.product_detail .product_content .content_right button::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: -300%;
+  display: block;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.379) 0%, rgba(255, 255, 255, 0.42) 100%);
+  transform: skew(-30deg);
+  transition: all 0.75s;
+}
+.product_detail .product_content .content_right button:hover {
+  background-position: right center;
+}
+.product_detail .product_content .content_right button:hover::before {
+  left: 100%;
 }/*# sourceMappingURL=style.css.map */
