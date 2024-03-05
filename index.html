@@ -117,27 +117,51 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./img/item.png" class="d-block w-100" alt="..." />
-                        <div class="carousel_item d-md-block">
-                            <h5>Nike Adapt BB</h5>
-                            <p>Nike shoe is the rare...</p>
-                            <button class="styleButton1">Detail</button>
+                        <div class="carousel_container">
+                            <div class="carousel_img">
+                                <img
+                                    src="https://shop.cyberlearn.vn/images/adidas-prophere.png"
+                                    class="d-block"
+                                    alt="..."
+                                />
+                            </div>
+                            <div class="carousel_item d-md-block">
+                                <h5>Nike Adapt BB</h5>
+                                <p>Nike shoe is the rare...</p>
+                                <button class="styleButton1">Detail</button>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/item.png" class="d-block w-100" alt="..." />
-                        <div class="carousel_item d-md-block">
-                            <h5>SNike Adapt BB</h5>
-                            <p>Nike shoe is the rare...</p>
-                            <button class="styleButton1">Detail</button>
+                        <div class="carousel_container">
+                            <div class="carousel_img">
+                                <img
+                                    src="https://shop.cyberlearn.vn/images/adidas-prophere.png"
+                                    class="d-block"
+                                    alt="..."
+                                />
+                            </div>
+                            <div class="carousel_item d-md-block">
+                                <h5>SNike Adapt BB</h5>
+                                <p>Nike shoe is the rare...</p>
+                                <button class="styleButton1">Detail</button>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/item.png" class="d-block w-100" alt="..." />
-                        <div class="carousel_item d-md-block">
-                            <h5>Nike Adapt BB</h5>
-                            <p>Nike shoe is the rare...</p>
-                            <button class="styleButton1">Detail</button>
+                        <div class="carousel_container">
+                            <div class="carousel_img">
+                                <img
+                                    src="https://shop.cyberlearn.vn/images/adidas-prophere.png"
+                                    class="d-block"
+                                    alt="..."
+                                />
+                            </div>
+                            <div class="carousel_item d-md-block">
+                                <h5>Nike Adapt BB</h5>
+                                <p>Nike shoe is the rare...</p>
+                                <button class="styleButton1">Detail</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -196,6 +220,57 @@
                                     <button class="w-50 styleButton2">Detail</button>
                                     <p class="price_text text-center w-50">Price</p>
                                 </div>
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark btnQuickView"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"
+                                >
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+
+                            <!-- Modal -->
+                            <div
+                                class="modal fade"
+                                id="staticBackdrop"
+                                data-bs-backdrop="static"
+                                data-bs-keyboard="false"
+                                tabindex="-1"
+                                aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Info Product</h5>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="product_img">
+                                                <img
+                                                    src="https://shop.cyberlearn.vn/images/adidas-prophere.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="product_info">
+                                                <h3 class="product_title">Adidas Propheres</h3>
+                                                <p class="product_description">The midsole contains 20% more</p>
+                                                <p class="product_size">39</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col card_body">
@@ -278,9 +353,6 @@
             </div>
         </section>
 
-        <footer>
-            <!-- place footer here -->
-        </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
