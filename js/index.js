@@ -12,6 +12,9 @@ function getAllProduct() {
             arrProduct = res.data.content;
             renderProduct(arrProduct);
             // return arrProduct;
+            let newArrProduct = arrProduct.slice(0, 3);
+            console.log(newArrProduct);
+            renderCarousel(newArrProduct);
         })
         .catch(function (err) {
             // Thất bại
@@ -27,7 +30,7 @@ function renderProduct(arr) {
         var product = arr[index];
         content += `
         <div class="col card_body">
-        <div class="product_content">
+         <div class="product_content">
             <div class="product_img">
                 <img src="${product.image}" alt="" />
             </div>
@@ -39,12 +42,83 @@ function renderProduct(arr) {
                 <button class="w-50 styleButton2">Detail</button>
                 <p class="price_text text-center w-50">${product.price} $</p>
             </div>
+            <button
+                                    type="button"
+                                    class="btn btn-outline-dark btnQuickView"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"
+                                >
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
         </div>
+        <div
+                                class="modal fade"
+                                id="staticBackdrop"
+                                data-bs-backdrop="static"
+                                data-bs-keyboard="false"
+                                tabindex="-1"
+                                aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Info Product</h5>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="product_img">
+                                                <img
+                                                    src="${product.image}"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="product_info">
+                                                <h3 class="product_title">${product.name}</h3>
+                                                <p class="product_description">${product.description}</p>
+                                                <p class="product_size">${product.size}</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
     </div>
-                        
+                    
         `;
     }
     document.getElementById('showProduct').innerHTML = content;
+}
+function renderCarousel(arr) {
+    var contentCarousel = '';
+    for (let i = 0; i < arr.length; i++) {
+        var item = arr[i];
+        contentCarousel += `
+        <div class="carousel-item  ${i === 0 ? 'active' : ''}">
+        <div class="carousel_container">
+        <div class="carousel_img">
+        <img src="${item.image}" class="d-block" alt="..." />
+        </div>
+        <div class="carousel_item d-md-block">
+            <h5>${item.name}</h5>
+            <p>${item.shortDescription}</p>
+            <button class="styleButton1">Detail</button>
+        </div>
+        </div>
+            </div>
+        
+        `;
+    }
+    document.querySelector('.carousel-inner').innerHTML = contentCarousel;
 }
 
 // Tìm kiếm sản phẩm
