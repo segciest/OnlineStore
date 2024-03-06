@@ -419,7 +419,7 @@ header nav ul li a:hover {
   border: 1px solid transparent;
   cursor: pointer;
 }
-.product_detail .product_content .content_right button {
+.product_detail .product_content .content_right .btn {
   background-image: linear-gradient(to right, #CB17EC 0, #7C2BE3 51%, #4F37E7 100%);
   background-size: 150%;
   border-radius: 0px;
@@ -429,9 +429,8 @@ header nav ul li a:hover {
   font-weight: 300;
   position: relative;
   transition: all 1.5s;
-  animation: CusTom 2s infinite;
 }
-.product_detail .product_content .content_right button::before {
+.product_detail .product_content .content_right .btn::before {
   content: "";
   position: absolute;
   width: 20%;
@@ -443,9 +442,46 @@ header nav ul li a:hover {
   transform: skew(-30deg);
   transition: all 0.75s;
 }
-.product_detail .product_content .content_right button:hover {
+.product_detail .product_content .content_right .btn:hover {
   background-position: right center;
 }
-.product_detail .product_content .content_right button:hover::before {
+.product_detail .product_content .content_right .btn:hover::before {
   left: 100%;
+}
+
+.product .product_realate .realate {
+  background-color: #F8F8F8;
+  margin: 20px 0;
+  padding: 30px 0 0 0px;
+}
+.product .product_realate .realate .realate_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product .product_realate .realate .realate_img img {
+  width: 70%;
+}
+.product .product_realate .realate .realate_info {
+  text-align: center;
+}
+.product .product_realate .realate .realate_info h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.product .product_realate .realate .realate_info .realate_sub {
+  color: #E4E3E3;
+}
+.product .product_realate .realate .product_button button {
+  padding: 12px 23px;
+  background-color: #E1B067;
+  border-radius: 0;
+  width: 50%;
+  transition: all 0.5s;
+}
+.product .product_realate .realate .product_button button:hover {
+  background-color: #ec9411;
+}
+.product .product_realate .realate .product_button .price_text {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

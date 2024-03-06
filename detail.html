@@ -96,7 +96,7 @@ referrerpolicy="no-referrer"
           <div class="row">
             <div class="col-6">
               <div class="content_left">
-                <img src="./image/adidas-ultraboost-4.png">
+                <img src="https://shop.cyberlearn.vn/images/adidas-prophere.png">
               </div>
             </div>
             <div class="col-6">
@@ -105,7 +105,7 @@ referrerpolicy="no-referrer"
                 <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores pariatur sequi esse ducimus veritatis aspernatur totam inventore, tempore rem impedit illum qui a quae aperiam officiis, error repellat sunt nulla! </p>
                 <p class="sub_title">Available size 
                 </p>
-                <div class="size_right">
+                <div class="size_right"id="sizeOptions">
                   <div class="size-option">38</div>
                   <div class="size-option">39</div>
                   <div class="size-option">40</div>
@@ -114,11 +114,11 @@ referrerpolicy="no-referrer"
                 </div>
                 <h3 class="text-danger my-3">85$</h3>
                 <div class="soLuong_right">
-                  <div class="soLuong1">+</div>
-                  <div class="soLuong">1</div>
-                  <div class="soLuong1">-</div>
+                  <button onclick="giamSoLuong()" class="soLuong1">+</button>
+                  <span id="soLuong">1</span>
+                  <button onclick="tangSoLuong()" class="soLuong1">-</button>
                 </div>
-                <button class="my-3">Add to Cart</button>
+                <button class="btn my-3">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -128,7 +128,102 @@ referrerpolicy="no-referrer"
 
     <div class="product">
       <div class="container">
-        <h1></h1>
+        <h1 class="text-center my-3">-Realate Product -</h1>
+        <div class="product_realate">
+          <div id="showRealate" class="row">
+            <div class="col-4 card_realate">
+              <div class="realate">
+                <div class="realate_img">
+                  <img src="https://shop.cyberlearn.vn/images/adidas-prophere.png" alt="" />
+                </div>
+                <div class="realate_info">
+                  <h3 class="realate_title">Adidas Propheres</h3>
+                  <p class="realate_sub">The midsole contains 20% more</p>
+                </div>
+                <div class="product_button">
+                  <button class="btn ">Buy now</button>
+                  <p class="price_text text-center ">Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 card_realate">
+              <div class="realate">
+                <div class="realate_img">
+                  <img src="https://shop.cyberlearn.vn/images/adidas-prophere.png" alt="" />
+                </div>
+                <div class="realate_info">
+                  <h3 class="realate_title">Adidas Propheres</h3>
+                  <p class="realate_sub">The midsole contains 20% more</p>
+                </div>
+                <div class="product_button">
+                  <button class="btn ">Buy now</button>
+                  <p class="price_text text-center ">Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 card_realate">
+              <div class="realate">
+                <div class="realate_img">
+                  <img src="https://shop.cyberlearn.vn/images/adidas-prophere.png" alt="" />
+                </div>
+                <div class="realate_info">
+                  <h3 class="realate_title">Adidas Propheres</h3>
+                  <p class="realate_sub">The midsole contains 20% more</p>
+                </div>
+                <div class="product_button">
+                  <button class="btn ">Buy now</button>
+                  <p class="price_text text-center ">Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 card_realate">
+              <div class="realate">
+                <div class="realate_img">
+                  <img src="https://shop.cyberlearn.vn/images/adidas-prophere.png" alt="" />
+                </div>
+                <div class="realate_info">
+                  <h3 class="realate_title">Adidas Propheres</h3>
+                  <p class="realate_sub">The midsole contains 20% more</p>
+                </div>
+                <div class="product_button">
+                  <button class="btn ">Buy now</button>
+                  <p class="price_text text-center ">Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 card_realate">
+              <div class="realate">
+                <div class="realate_img">
+                  <img src="https://shop.cyberlearn.vn/images/adidas-prophere.png" alt="" />
+                </div>
+                <div class="realate_info">
+                  <h3 class="realate_title">Adidas Propheres</h3>
+                  <p class="realate_sub">The midsole contains 20% more</p>
+                </div>
+                <div class="product_button">
+                  <button class="btn ">Buy now</button>
+                  <p class="price_text text-center ">Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 card_realate">
+              <div class="realate">
+                <div class="realate_img">
+                  <img src="https://shop.cyberlearn.vn/images/adidas-prophere.png" alt="" />
+                </div>
+                <div class="realate_info">
+                  <h3 class="realate_title">Adidas Propheres</h3>
+                  <p class="realate_sub">The midsole contains 20% more</p>
+                </div>
+                <div class="product_button">
+                  <button class="btn ">Buy now</button>
+                  <p class="price_text text-center ">Price</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -146,6 +241,7 @@ referrerpolicy="no-referrer"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/detail.js"></script>
   </body>
 </html>
