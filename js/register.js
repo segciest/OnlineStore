@@ -25,6 +25,8 @@ import User from "./user.js";
 //     console.log(err);
 //   }
 // }
+
+// Lấy dữ liệu người dùng
 function getValue() {
   let user = new User();
   let arrInput = document.querySelectorAll("#form input");
@@ -37,6 +39,8 @@ function getValue() {
   });
   return user;
 }
+
+// Hàm check validate
 function checkIn() {
   let user = getValue();
   let isValid = true;
@@ -48,8 +52,8 @@ function checkIn() {
   isValid &= checkEmptyValue(user.phone, "phoneNoti");
 
   // Check định dạng password
-  //   isValid &= checkPassword(user.passoword, "passwordNoti");
-  //   isValid &= checkPassword(user.passwordConfirm, "passwordConfirmNoti");
+  isValid &= checkPassword(user.passoword, "passwordNoti");
+  isValid &= checkPassword(user.passwordConfirm, "passwordConfirmNoti");
 
   //   Check double passord
   isValid &= doubleCheckPassword(
@@ -70,6 +74,8 @@ function checkIn() {
     return user;
   }
 }
+
+// Hàm đưa dữ liệu lên API
 function addUser() {
   let user = checkIn();
   let promise = axios({
@@ -80,9 +86,31 @@ function addUser() {
   promise
     .then(function (res) {
       console.log(res);
+      displayNotification(res.data.message, res.data.statusCode);
+      resetForm();
     })
     .catch(function (err) {
       console.log(err);
+      displayNotification(err.message, err.response.status);
     });
 }
+function resetForm() {
+  // getAllSinhVien();
+  document.querySelector("form").reset();
+}
+function displayNotification(message, status) {
+  var firstLetter = status.toString().split("");
+  Toastify({
+    text: message,
+    duration: 2000,
+    close: true,
+    gravity: "top",
+    position: "right",
+    style: {
+      background: firstLetter[0] == 2 ? "green" : "red",
+      color: "white",
+    },
+  }).showToast();
+}
+// Sự kiện submit
 document.getElementById("btnSubmit").onclick = addUser;

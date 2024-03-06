@@ -1,5 +1,6 @@
 header {
   .headerContent {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,10 +24,13 @@ header {
         text-decoration: none;
         color: white;
         padding-right: 20px;
+        @include styleAHover($color_hover);
       }
       .register {
+        display: none;
         text-decoration: none;
-        color: white;
+        color: $color_white;
+        @include styleAHover($color_hover);
       }
     }
   }

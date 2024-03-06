@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header .headerContent {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #000000;
+}
+header .headerContent .headerLogo img {
+  width: 116px;
+  height: 32px;
+}
+header .headerContent .headerItem i {
+  display: inline;
+  align-items: center;
+  width: 60px;
+  height: 30px;
+  padding-right: 20px;
+}
+header .headerContent .headerItem .login {
+  text-decoration: none;
+  color: white;
+  padding-right: 20px;
+}
+header .headerContent .headerItem .login:hover {
+  color: #12ceeb;
+  cursor: pointer;
+}
+header .headerContent .headerItem .register {
+  display: none;
+  text-decoration: none;
+  color: white;
+}
+header .headerContent .headerItem .register:hover {
+  color: #12ceeb;
+  cursor: pointer;
+}
+
+.body {
+  margin-top: 50px;
+}
+.body .bodyElement {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 30px 0;
+}
+.body .bodyElement .bodyRegister {
+  margin-bottom: 30px;
+}
+.body .bodyElement .bodyRegister h1 {
+  text-align: center;
+  height: 48px;
+  font-weight: 400;
+}
+.body .bodyElement .bodyContent {
+  margin: 0 100px;
+  align-items: center;
+}
+.body .bodyElement .bodyContent form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0 30px;
+}
+.body .bodyElement .bodyContent form span {
+  color: red;
+}
+.body .bodyElement .bodyContent form ul {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin-bottom: unset;
+  padding-left: unset;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+.body .bodyElement .bodyContent form ul li {
+  text-align: center;
+}
+.body .bodyElement .bodyContent .btn {
+  display: flex;
+  justify-content: right;
+}
+.body .bodyElement .bodyContent .btn button {
+  background-color: #ae19e2;
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 8px;
+  color: white;
+  width: 291px;
+  height: 50px;
+  box-shadow: none;
+  transition: all 0.5s;
+}
+.body .bodyElement .bodyContent .btn button:hover {
+  background-color: white;
+  color: #ae19e2;
+  cursor: pointer;
+}
+
+.footer {
+  border-top: solid 1px rgb(236, 236, 236);
+  padding: 25px;
+  margin-top: 50px;
+}
+.footer .footerContent .footerUp {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.footer .footerContent .footerUp a {
+  text-decoration: none;
+  color: black;
+}
+.footer .footerContent .footerUp .forMore {
+  color: red;
+}
+.footer .footerContent .footerUp .footerItem ul {
+  list-style: none;
+  padding-left: 0 !important;
+}
+.footer2 {
+  background-color: rgb(236, 236, 236);
+  padding: 25px;
+}
+.footer2 .footer2Content .footerDown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.footer2 .footer2Content .footerDown a {
+  text-decoration: none;
+  color: black;
+}
+.footer2 .footer2Content .footerDown .forMore {
+  color: red;
+}/*# sourceMappingURL=register.css.map */
