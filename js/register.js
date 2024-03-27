@@ -3,6 +3,7 @@ import { doubleCheckPassword } from "./validation.js";
 import { checkPassword } from "./validation.js";
 import { checkNoNumber } from "./validation.js";
 import { checkIsVietnamesePhoneNumber } from "./validation.js";
+
 import User from "./user.js";
 // async function getInfo() {
 //   try {

@@ -1,0 +1,20 @@
+Capstone {
+    html:
+    css:
+    sass:
+    bootstrap:
+    axios:
+    js:
+    font-awsome:
+    gg-font:
+    carousel:
+}
+Thành viên:
+1. Hoàng Anh Vũ
+2. Tiêu Minh Duy
+3. Bảo
+
+Phân công công việc:
+1. Layout index: Hoàng Anh Vũ
+2. layout detail: Tiêu Minh Duy
+3. Layout register: Tiêu Minh Duy
