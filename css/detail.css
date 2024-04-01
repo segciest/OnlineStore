@@ -232,4 +232,36 @@ body {
   justify-content: center;
   color: orange;
   height: 100%;
+}
+
+.modal-dialog {
+  max-width: 600px !important;
+}
+.modal-dialog tbody #productCart {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.modal-dialog tbody #productCart th {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.modal-dialog tbody #bodyCartItem {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.modal-dialog tbody #bodyCartItem td {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }/*# sourceMappingURL=detail.css.map */

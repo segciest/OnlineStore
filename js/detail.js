@@ -1,5 +1,5 @@
 let cartList = [];
-
+renderCart();
 // lấy dữ liệu từ DB
 async function hienThiSanPham() {
   try {
@@ -147,6 +147,7 @@ async function renderButton() {
     let list = addToCart(data);
     saveLocalStorage("cartList", list);
     console.log(cartList);
+    renderCart();
   };
 }
 renderButton();
@@ -160,12 +161,19 @@ async function renderCart() {
   } else {
     data.map((item) => {
       content += `
-      <tr>
+      <tr id="bodyCartItem">
         <td>${item.name}</td>
         <td><img style="width:100px;height:100px" src="${item.image}"></td>
         <td>${item.price}</td>
-        <td>${item.total}</td>
-        
+        <td>
+          <button onclick="updateItem(true,'${item.id}')" class="up"><i class="fa-solid fa-plus"></i></button>
+
+            ${item.total}
+          <button onclick="updateItem(false,'${item.id}')" class="down"><i class="fa-solid fa-minus"></i></button> 
+        </td>
+        <td>
+          <button onclick="deleteItem('${item.id}')" class="delete px-3 py-2 rounded">Xoá</button
+        <td>
       </tr>
                   `;
     });
@@ -174,4 +182,34 @@ async function renderCart() {
 
   return content;
 }
-renderCart();
+
+const deleteItem = (id) => {
+  let data = getLocalStorage("cartList");
+  let newData = [...data];
+  let index = data.findIndex((item) => item.id == id);
+  if (index !== -1) {
+    newData.splice(index, 1);
+  }
+  cartList = newData;
+  saveLocalStorage("cartList", cartList);
+  renderCart();
+};
+
+const updateItem = (boolean, id) => {
+  let data = getLocalStorage("cartList");
+  let newData = [...data];
+  let index = newData.findIndex((item) => item.id == id);
+
+  if (boolean == true) {
+    newData[index].total += 1;
+  } else {
+    newData[index].total -= 1;
+    if (newData[index].total == 0) {
+      console.log("abc");
+      newData.splice(index, 1);
+    }
+  }
+  cartList = newData;
+  saveLocalStorage("cartList", cartList);
+  renderCart();
+};
