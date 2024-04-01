@@ -1,3 +1,5 @@
+let cartList = [];
+
 // lấy dữ liệu từ DB
 async function hienThiSanPham() {
   try {
@@ -95,7 +97,7 @@ async function relatedProducts() {
           <h2>${item.name}</h2>
         </div>
         <div class="relatedContent">
-            <a target="_blank" href="./detail.html?idSanPham=${item.id}">
+            <a target="" href="./detail.html?idSanPham=${item.id}">
               Buy now
             </a>
           <p class="relatedPrice">$${item.price}</p>
@@ -106,3 +108,70 @@ async function relatedProducts() {
   document.getElementById("relatedProducts").innerHTML = content;
 }
 relatedProducts();
+
+// Hàm lưu trữ dữ liệu vào localStorage
+function saveLocalStorage(key, value) {
+  // Chuyển đổi dữ liệu về thành chuỗi JSON
+  var stringJson = JSON.stringify(value);
+  // Sử dụng setItem để lưu trữ
+  localStorage.setItem(key, stringJson);
+}
+
+// Hàm giúp lấy dữ liệu từ localStorage
+function getLocalStorage(key) {
+  var dataLocal = localStorage.getItem(key);
+  // Kiểm tra dữ liệu xem có hay không, vì nếu localStorage. getItem gọi lấy dữ liệu không có sẽ trả về null
+  if (dataLocal) {
+    // Chuyển đổi chuỗi JSON về lại array hoặc object
+    var newData = JSON.parse(dataLocal);
+  }
+  return newData;
+}
+function addToCart(data) {
+  cartList = getLocalStorage("cartList");
+  let check = cartList.findIndex((item) => item.id == data.id);
+  let newCartList = [...cartList];
+  if (check == -1) {
+    newCartList.push({ ...data, total: 1 });
+  } else {
+    newCartList[check].total += 1;
+  }
+  cartList = newCartList;
+  return cartList;
+}
+async function renderButton() {
+  let data = await hienThiSanPham();
+
+  document.querySelector(".addToCart").onclick = () => {
+    addToCart(data);
+    let list = addToCart(data);
+    saveLocalStorage("cartList", list);
+    console.log(cartList);
+  };
+}
+renderButton();
+
+async function renderCart() {
+  let data = getLocalStorage("cartList");
+  let content = "";
+
+  if (cartList.length < 0) {
+    cartList = [...data];
+  } else {
+    data.map((item) => {
+      content += `
+      <tr>
+        <td>${item.name}</td>
+        <td><img style="width:100px;height:100px" src="${item.image}"></td>
+        <td>${item.price}</td>
+        <td>${item.total}</td>
+        
+      </tr>
+                  `;
+    });
+  }
+  document.getElementById("bodyCart").innerHTML = content;
+
+  return content;
+}
+renderCart();
