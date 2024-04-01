@@ -55,7 +55,7 @@ function checkIn() {
   // Check định dạng password
   isValid &= checkPassword(user.passoword, "passwordNoti");
   isValid &= checkPassword(user.passwordConfirm, "passwordConfirmNoti");
-
+  console.log(isValid);
   //   Check double passord
   isValid &= doubleCheckPassword(
     user.password,

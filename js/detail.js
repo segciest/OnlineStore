@@ -60,6 +60,7 @@ async function renderElement() {
   const data = await hienThiSanPham();
   let content = "";
   var quantityState = document.querySelector(".detailState");
+  console.log(data);
   if (data.quantity > 0) {
     quantityState.innerHTML = "Available";
     quantityState.style.color = "green";
@@ -91,10 +92,10 @@ async function relatedProducts() {
           <h2>${item.name}</h2>
         </div>
         <div class="relatedContent">
-          <button>
-            <a target="_blank" href="./detail.html?idSanPham=${item.id}">Buy now</a>
-          </button>
-          <p class="relatedPrice">${item.price}</p>
+            <a target="_blank" href="./detail.html?idSanPham=${item.id}">
+              Buy now
+            </a>
+          <p class="relatedPrice">$${item.price}</p>
         </div>
     </div>
                     `;

@@ -51,7 +51,7 @@ export function doubleCheckPassword(value, value2, idSpan) {
     eleSpan.innerHTML = "";
     return true;
   } else {
-    eleSpan.innerHTML = "Vui lòng nhập lại mật khẩu";
+    eleSpan.innerHTML = "Vui lòng nhập lại mật khẩu tương tự";
   }
 }
 
