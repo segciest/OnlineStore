@@ -154,6 +154,7 @@ async function renderButton() {
     saveLocalStorage("cartList", list);
     console.log(cartList);
     renderCart();
+    displayNotification("Thêm thành công", "them");
   };
 }
 renderButton();
@@ -199,6 +200,7 @@ const deleteItem = (id) => {
   cartList = newData;
   saveLocalStorage("cartList", cartList);
   renderCart();
+  displayNotification("Xoá thành công", "xoa");
 };
 
 const updateItem = (boolean, id) => {
@@ -213,9 +215,24 @@ const updateItem = (boolean, id) => {
     if (newData[index].total == 0) {
       console.log("abc");
       newData.splice(index, 1);
+      displayNotification("Xoá thành công", "xoa");
     }
   }
   cartList = newData;
   saveLocalStorage("cartList", cartList);
   renderCart();
 };
+
+function displayNotification(message, type) {
+  Toastify({
+    text: message,
+    duration: 2000,
+    close: true,
+    gravity: "top",
+    position: "right",
+    style: {
+      background: type == "them" ? "green" : "red",
+      color: "white",
+    },
+  }).showToast();
+}
