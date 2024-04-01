@@ -4,7 +4,8 @@
 // Helpers
 @import "./helper/mixinregister";
 @import "./helper/variableregister";
-
+@import "./helper/variables";
+@import "./helper/mixin";
 // Layout
 @import "./layouts/header";
 @import "./layouts/footerregister.scss";
@@ -56,9 +57,26 @@ body {
     .btnSize {
       margin: 20px;
     }
-    .detailPrice {
-      color: rgba(255, 0, 0, 0.607);
-      margin: 20px;
+    .detailFunction {
+      display: flex;
+      justify-content: end;
+      .detailPrice {
+        color: rgba(255, 0, 0, 0.607);
+        margin: 20px;
+      }
+      .addToCart {
+        background-color: violet;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+          rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        &:hover {
+          color: white;
+          background-color: rgb(171, 115, 171);
+        }
+      }
     }
   }
 }

@@ -32,7 +32,10 @@ async function renderSanPham() {
         <p class="detailDesc">${data.description}</p>
         <span class="detailState"></span>
         <div class="btnSize"></div>
-        <p class="detailPrice">$${data.price}</p>
+        <div class="detailFunction">
+          <p class="detailPrice">$${data.price}</p>
+          <button class="addToCart">Add to cart</button>
+        </div>
       </div>
     </div>
                     `;

@@ -160,9 +160,25 @@ body {
 .detailItem .detailContent .btnSize {
   margin: 20px;
 }
-.detailItem .detailContent .detailPrice {
+.detailItem .detailContent .detailFunction {
+  display: flex;
+  justify-content: end;
+}
+.detailItem .detailContent .detailFunction .detailPrice {
   color: rgba(255, 0, 0, 0.607);
   margin: 20px;
+}
+.detailItem .detailContent .detailFunction .addToCart {
+  background-color: violet;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.detailItem .detailContent .detailFunction .addToCart:hover {
+  color: white;
+  background-color: rgb(171, 115, 171);
 }
 
 #relatedProducts {
