@@ -31,7 +31,7 @@ export function checkEmailValue(value, idSpan) {
 // function password check
 export function checkPassword(value, idSpan) {
   const regexPassword =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{6,10}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{6,}$/;
   let isValid = regexPassword.test(value);
   let eleSpan = document.getElementById(idSpan);
   if (isValid) {
