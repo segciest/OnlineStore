@@ -1,4 +1,6 @@
 let cartList = [];
+getLocalStorage("cartList");
+// saveLocalStorage("cartList", cartList);
 renderCart();
 // lấy dữ liệu từ DB
 async function hienThiSanPham() {
@@ -129,6 +131,10 @@ function getLocalStorage(key) {
 }
 function addToCart(data) {
   cartList = getLocalStorage("cartList");
+  console.log(cartList);
+  if (!cartList) {
+    cartList = [];
+  }
   let check = cartList.findIndex((item) => item.id == data.id);
   let newCartList = [...cartList];
   if (check == -1) {
@@ -143,7 +149,7 @@ async function renderButton() {
   let data = await hienThiSanPham();
 
   document.querySelector(".addToCart").onclick = () => {
-    addToCart(data);
+    // addToCart(data);
     let list = addToCart(data);
     saveLocalStorage("cartList", list);
     console.log(cartList);
